@@ -1,0 +1,18 @@
+.form-style{
+    border:2px solid red;
+    width:100%; 
+    padding:2%;
+    display: flex;
+}
+.form-style form{
+    width:100%;
+  display:flex;  
+  border:2px solid blue; 
+}
+.form-style input{
+    padding:2%;
+    width:40%;
+}
+.form-style button{
+
+}
