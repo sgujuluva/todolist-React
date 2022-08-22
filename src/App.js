@@ -10,7 +10,7 @@ function App() {
   return (
     <div className="App">
       <Forms setInput={setInput}/>
-      <ToDoList setTodos={setTodos}/>
+      <ToDoList todos={todos} setTodos={setTodos}/>
     </div>
   );
 }

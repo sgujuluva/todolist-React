@@ -3,15 +3,17 @@ import React from "react";
 //styles
 import "./forms.css";
 function Forms({ setInput }) {
-  const handleChange = (e) => {
-    e.preventDefault();
+  const handleChange = (e) => {   
     setInput(e.target.value);
   };
+  const handleClick = (e) => {
+    e.preventDefault();
+  }
   return (
     <div className="form-style">
       <form>
         <input onChange={handleChange} type="text" placeholder="Enter a task" />
-        <button /* onClick={()} */ type="submit">Add</button>
+        <button onClick={handleClick}  type="submit">Add</button>
         <div className="select">
           <select name="todos">
             <option value="all">All</option>
