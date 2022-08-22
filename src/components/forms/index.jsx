@@ -17,7 +17,7 @@ function Forms({input, setInput, todos, setTodos }) {
   return (
     <div className="form-style">
       <form>
-        <input onChange={handleChange} type="text" placeholder="Enter a task" />
+        <input onChange={handleChange} value={input} type="text" placeholder="Enter a task" />
         <button onClick={handleClick}  type="submit">Add</button>
         <div className="select">
           <select name="todos">
