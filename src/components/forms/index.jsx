@@ -11,7 +11,7 @@ function Forms({ setInput }) {
     <div className="form-style">
       <form>
         <input onChange={handleChange} type="text" placeholder="Enter a task" />
-        <button type="submit">Add</button>
+        <button /* onClick={()} */ type="submit">Add</button>
         <div className="select">
           <select name="todos">
             <option value="all">All</option>
