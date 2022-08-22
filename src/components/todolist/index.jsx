@@ -3,7 +3,10 @@ import React from 'react'
 import "./todolist.css"
 function ToDoList() {
   return (
-    <div>ToDoList</div>
+    <div className="todo-container">
+    
+    
+    </div>
   )
 }
 
