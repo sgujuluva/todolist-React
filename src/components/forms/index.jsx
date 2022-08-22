@@ -1,13 +1,18 @@
 import { hasSelectionSupport } from "@testing-library/user-event/dist/utils";
 import React from "react";
+import ToDoList from "../todolist";
 //styles
 import "./forms.css";
-function Forms({ setInput }) {
+function Forms({input, setInput, todos, setTodos }) {
   const handleChange = (e) => {   
     setInput(e.target.value);
   };
   const handleClick = (e) => {
     e.preventDefault();
+    setTodos([...todos, 
+      {text:input, completed:false, }
+    ])
+    setInput("") //restets the input
   }
   return (
     <div className="form-style">
