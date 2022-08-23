@@ -8,22 +8,31 @@ let check =
 let uncheck = "https://cdn-icons-png.flaticon.com/128/3388/3388701.png";
 
 function ToDoList() {
-  const { todos, setTodos } = useContext(context);
+  const { todos, setTodos, options, setOptions } = useContext(context);
 
   const handleCheck = (i) => {
-    
+    let mapped = todos.map((item, index) =>
+      i === index ? { ...item, isCompleted: !item.isCompleted } : item
+    );
+    setTodos(mapped);
   };
 
   const handleUncheck = (i) => {
     let filter = todos.filter((item, index) => index !== i);
     setTodos(filter);
   };
+
+  let filteredOne = (item) =>
+    (options === "completed" && item.isCompleted === true) ||
+    (options.includes("uncompleted") && item.isCompleted === false) ||
+    (options.includes("all") && item);
+
   return (
     <div className="todo-container">
       <ul className="todo-list">
-        {todos.map((item, i) => (
+        {todos.filter(filteredOne).map((item, i) => (
           <li>
-            <span>{item.value}</span>
+            <span className={item.isCompleted && "done"}>{item.value}</span>
             <div className="buttons">
               <button onClick={() => handleCheck(i)}>
                 <img src={check} alt="" />

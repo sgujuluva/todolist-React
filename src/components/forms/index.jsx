@@ -5,7 +5,8 @@ import ToDoList from "../todolist";
 //styles
 import "./forms.css";
 function Forms() {
-  const { input, setInput, todos, setTodos } = useContext(context);
+  const { input, setInput, todos, setTodos, options, setOptions } =
+    useContext(context);
   console.log(input.value);
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -19,20 +20,21 @@ function Forms() {
         <input
           required
           value={input.value}
-          onChange={(e) => setInput({ value: e.target.value })}
+          onChange={(e) => setInput({ ...input, value: e.target.value })}
           type="text"
           placeholder="Enter a task"
         />{" "}
         {/* // bcs its an obj using .value */}
         <button type="submit">Add</button>
-        <div className="select">
-          <select name="todos">
+        
+         
+      
+      </form>
+      <select onChange={(e) => setOptions(e.target.value)} name="todos">
             <option value="all">All</option>
             <option value="completed">Completed</option>
             <option value="uncompleted">Uncompleted</option>
           </select>
-        </div>
-      </form>
     </div>
   );
 }

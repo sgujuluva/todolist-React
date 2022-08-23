@@ -5,8 +5,9 @@ export const context = createContext();
 function ContextFun({children}) {
     const [input,setInput] = useState({value:"" , isCompleted:false})
     const [todos, setTodos] = useState([])
+    const [options,setOptions] = useState("all");
   return (
-    <context.Provider value= {{input,setInput,todos, setTodos}}>{children}</context.Provider>
+    <context.Provider value= {{input,setInput,todos, setTodos , options,setOptions}}>{children}</context.Provider>
   )
 }
 
