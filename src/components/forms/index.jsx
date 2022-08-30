@@ -15,7 +15,10 @@ function Forms() {
   };
   console.log("todos", todos);
   return (
+    <>
+    <h1>To-do list - REACT</h1>
     <div className="form-style">
+     
       <form onSubmit={handleSubmit}>
         <input
           required
@@ -36,6 +39,7 @@ function Forms() {
             <option value="uncompleted">Uncompleted</option>
           </select>
     </div>
+    </>
   );
 }
 
