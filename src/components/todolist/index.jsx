@@ -1,10 +1,11 @@
 import React, { useContext } from "react";
 import { context } from "../ContextFun";
+import checkIcon from "../../images/check.png"
 
 //styles
 import "./todolist.css";
 let check =
-  "https://cdn-icons.flaticon.com/png/128/1634/premium/1634264.png?token=exp=1661256751~hmac=3e2a36fb98e070c1132101d60150916c";
+  "https://cdn-icons-png.flaticon.com/128/5610/5610944.png";
 let uncheck = "https://cdn-icons-png.flaticon.com/128/3388/3388701.png";
 
 function ToDoList() {
@@ -35,7 +36,7 @@ function ToDoList() {
             <span className={item.isCompleted && "done"}>{item.value}</span>
             <div className="buttons">
               <button onClick={() => handleCheck(i)}>
-                <img src={check} alt="" />
+                <img src={checkIcon} alt="" />
               </button>
               <button onClick={() => handleUncheck(i)}>
                 <img src={uncheck} alt="" />
