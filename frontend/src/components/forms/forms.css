@@ -1,0 +1,27 @@
+.form-style {
+  width: 100%;
+  padding: 2%;
+  display: flex;
+  justify-content: space-around;
+
+}
+.form-style form {
+  width: 70%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+.form-style form input {
+  padding: 1%;
+  width: 90%;
+}
+.form-style form button {
+  padding: 1%;
+  width: 10%;
+}
+.form-style select {
+  padding: 0.2% 0;
+  margin-right: 2%;
+}
+
