@@ -10,7 +10,9 @@ const taskSchema = new Schema({
   isCompleted: {
     type: Boolean,
     default: false,
-  },
+  }  
+  /* input:String,
+  isCompleted:Boolean  */
 });
 
 const TodoModel = model("TodoModel", taskSchema)

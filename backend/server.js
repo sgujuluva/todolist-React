@@ -9,6 +9,8 @@ const app = express();
 
 app.use(express.json());
 
+app.use("/api/todos",todoRoutes)
+
 mongoose
 .connect(`mongodb+srv://${process.env.DB_USER}:${process.env.DB_PASS}@${process.env.DB_HOST}/${process.env.DB_NAME}`)
 .then(() => {
@@ -18,7 +20,6 @@ mongoose
     console.log(error.message)
 })
 
-app.use("/api/todos",todoRoutes)
 
 app.listen(7000, () => {
     console.log("server running in port 7000")
